@@ -32,6 +32,7 @@
           <h3 class="card-title">{{ t('orders.allOrders') }} ({{ orders.length }})</h3>
         </div>
         <div class="table-container">
+          <div class="table-scroll">
           <table class="orders-table">
             <thead>
               <tr>
@@ -72,6 +73,7 @@
               </tr>
             </tbody>
           </table>
+          </div>
         </div>
       </div>
     </div>
@@ -172,6 +174,11 @@ export default {
 </script>
 
 <style scoped>
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 /* Fixed table layout to prevent column shifting */
 .orders-table {
   table-layout: fixed;
